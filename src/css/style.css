@@ -113,6 +113,11 @@ body {
     top: initial;
   }
 
+  .draw__text {
+    top: 30px;
+    font-size: 1.5em;
+  }
+
   .draw__balloon-a, .draw__balloon-b {
     opacity: 1;
     width: 60px;
