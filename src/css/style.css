@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+html, body, .draw {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+}
+
+body {
+  background-color: #4e4c7d;
+}
+
+.draw__bg, .draw__couple {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 700px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.draw__bg img {
+  position: relative;
+  left: 27px;
+}
+
+.draw__couple img {
+  top: -71px;
+  position: relative;
+}
+
+.draw__text {
+  font-family: "Press Start 2p", sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  position: relative;
+  top: 80px;
+}
+
+.draw__text small {
+  opacity: .3;
+}
+
+.draw__star {
+  position: absolute;
+  background-color: #fff;
+  opacity: 0;
+  animation: star 2s ease-in-out infinite;
+}
+
+@keyframes star {
+  0%, 100% {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  }
+}
+
+.draw__couple:hover .draw__balloon-a, 
+.draw__couple:hover .draw__balloon-b {
+  opacity: 1;
+}
+
+.draw__balloon-a, .draw__balloon-b {
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.draw__balloon-a {
+  left: 120px;
+}
+
+.draw__balloon-b {
+  right: 120px;
+}
+
+.draw__balloon-a img, .draw__balloon-b img {
+    top: 0;
+}
+
+.draw__balloon-a:before, .draw__balloon-b:before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin: auto;
+    bottom: -20px;
+    box-shadow: 0px 0 0 transparent, 5px 0 0 white, 10px 0 0 white, 15px 0 0 transparent, 0px 5px white, 5px 5px white, 10px 5px white, 15px 5px white, 0 10px transparent, 5px 10px white, 10px 10px white, 15px 10px transparent;
+}
+
+.draw__balloon-a:before { right: 30px; }
+.draw__balloon-b:before { left: 30px; }
