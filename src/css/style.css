@@ -103,3 +103,30 @@ body {
 
 .draw__balloon-a:before { right: 30px; }
 .draw__balloon-b:before { left: 30px; }
+
+@media screen and (max-width: 600px) {
+  .draw__bg {
+    display: none;
+  }
+
+  .draw__couple {
+    top: initial;
+  }
+
+  .draw__balloon-a, .draw__balloon-b {
+    opacity: 1;
+    width: 60px;
+  }
+
+  .draw__balloon-a {
+    left: 30px;
+  }
+
+  .draw__balloon-b {
+    right: 30px;
+  }
+
+  .draw__balloon-a img, .draw__balloon-b img {
+    width: 100%;
+  }
+}
