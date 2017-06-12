@@ -2,4 +2,6 @@
 
 animação em 8 bits
 
-<img src="/src/img/print.jpg" align="center">
+<p align="center">
+  <img src="/src/img/print.jpg">
+</p>
